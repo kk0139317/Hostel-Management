@@ -1,0 +1,36 @@
+{% extends "side-menu.html" %} {% block body %}
+
+<div class="main">
+    <div class="row">
+        <div class="row-main">
+            <div class="row-man-col">
+                <h2>Admin</h2>
+            </div>
+            <div class="row-man-col">
+                <a href="add-admin" class="btn-admin ">Add Admin</a>
+            </div>
+        </div>
+        <div class="row1">
+
+            <table class="tbl-full">
+                <tr>
+                    <th>S.N.</th>
+                    <th>Full Nmae</th>
+                    <th>Username</th>
+                    <th>Action</th>
+                </tr>
+                {% for i in adminlist%}
+                <tr>
+                    <td> {{ forloop.counter}} </td>
+                    <td>{{ i.first_name }} {{i.last_name}}</td>
+                    <td>{{i.email_id}}</td>
+                    <td>
+                        <a class="btn-danger" href="#">
+                        Delete
+                      </a>
+                    </td>
+
+                </tr>
+                {% endfor %}
+            </table>
+            {% endblock body %}

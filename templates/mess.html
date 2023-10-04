@@ -1,0 +1,42 @@
+{% extends "side-menu.html" %} 
+{% block body %}
+{% load static %}
+
+<div class="main">
+    <div class="row">
+    </div>
+    <div class="mess-row">
+        <a href="breakfast">
+        <div class="mess-col">
+            <div class="mess-text">
+                    <div class="mess-images-1-2">
+                        <img src="{% static 'images/breakfast.png' %}" alt="" width='280px' height='280px' style='margin-left:-30px;'>
+                    </div>
+                    <p>Breakfast</p>
+                </div>
+            </div>
+        </a>
+        <a href="lunch">
+        <div class="mess-col-1">
+            <div class="mess-text">
+                <div class="mess-images-1-2">
+                    <img src="{% static 'images/lunch.png' %}" alt="" width='280px' height='280px' style='margin-left:-30px;' alt="">
+                </div>
+                <p>Lunch</p>
+                    </div>
+                </div>
+            </a>
+        <a href="dinner">
+        <div class="mess-col-2">
+            <div class="mess-text">
+                <div class="mess-images">
+                    <img src="{% static 'images/dinner.png' %}"  width='240px' height='240px' alt="" style='margin-top:35px;' alt=""> 
+                </div>
+                <p> Dinner</p>
+            </div>
+            </div>
+        </a>
+
+    </div>
+</div>
+{% endblock body %}

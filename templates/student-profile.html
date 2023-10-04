@@ -1,0 +1,65 @@
+{% extends 'student-side-menu.html' %}
+{% block body %}
+<div class="main-profile">
+    <div class="profile-images">
+        <!-- <img src="images/user.png" class="profile-images"> -->
+        <input type="file" id="input_profile-img">
+        {% for i in student_profile %}
+    </div>
+    <div id="profile-name">{{i.first_name}} {{i.last_name}}</div>
+    <div class="details">
+        <p>Personal Details:</p>
+    </div>
+    <div class="lines"></div>
+    <div class="main-personal">
+     <div class="main-personal-col-1">
+        <spam class="personal-details">First Name:</spam><br><br>
+        <spam class="personal-details">Last Name</spam><br><br>
+        <spam class="personal-details">Father First Name</spam><br><br>
+        <spam class="personal-details">Father Last Name</spam><br><br>
+        <spam class="personal-details">Gender:</spam><br><br>
+        <spam class="personal-details">Blood Group:</spam><br><br>
+        <spam class="personal-details">College Name:</spam><br><br>
+        <spam class="personal-details">Semester:</spam><br><br>
+        <spam class="personal-details">Roll No>:</spam><br><br>
+        <spam class="personal-details">Date Of Birth:</spam><br><br>
+        <spam class="personal-details">Hostel:</spam><br><br>
+        <spam class="personal-details">Floor:</spam><br><br>
+        <spam class="personal-details">Room No.:</spam><br><br>
+    </div>
+    <div class="main-personal-col">
+        <spam class="personal-details">{{ i.first_name }} </spam><br><br>
+        <spam class="personal-details">{{ i.last_name }}</spam><br><br>
+        <spam class="personal-details">{{ i.father_first_name }}</spam><br><br>
+        <spam class="personal-details">{{ i.father_last_name }}</spam><br><br>
+        <spam class="personal-details">{{ i.gender }}</spam><br><br>
+        <spam class="personal-details">{{ i.blood_group }}</spam><br><br>
+        <spam class="personal-details">{{ i.college_name }}</spam><br><br>
+        <spam class="personal-details">{{ i.semester }}</spam><br><br>
+        <spam class="personal-details">{{ i.roll_no }}</spam><br><br>
+        <spam class="personal-details">{{ i.dob }}</spam><br><br>
+        <spam class="personal-details">{{ i.hostel }}</spam><br><br>
+        <spam class="personal-details">{{ i.floor }}</spam><br><br>
+        <spam class="personal-details">{{ i.room_number }}</spam><br><br>
+        
+    </div>
+ </div>
+     <div class="persona-contact">
+            <p>Contacts</p>
+        </div>
+        <div class="lines"></div>
+        <div class="main-contact">
+        <div class="main-personal-col-1">
+        <spam class="personal-details">Mobile No.</spam><br><br>
+        <spam class="personal-details">Phone No.</spam><br><br>
+        <spam class="personal-details">Email Id.</spam><br><br>
+    </div>
+    <div class="main-personal-col">
+        <spam class="personal-details">{{ i.mobile_number }}</spam><br><br>
+        <spam class="personal-details">{{ i.alternate_number }}</spam><br><br>
+        <spam class="personal-details">{{ i.email_id }}</spam><br><br>
+     {% endfor %}
+    </div>
+ </div>
+</div>
+{% endblock body %}

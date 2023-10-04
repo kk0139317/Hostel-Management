@@ -1,0 +1,53 @@
+{% extends 'student-side-menu.html' %} {% load static %} {% block body %}
+
+<div class="st-nav">
+    <a href="/student-leave-status">
+        <div class="st-col1">
+            <h1>Leaves</h1>
+            <span>Accepted:{{ leave_accept }}</span> <br>
+            <span>Pending: {{ pending_leave }} </span> <br>
+            <span>Rejected: {{ leave_reject}}</span>
+        </div>
+    </a>
+    <a href="/student-outing-status">
+        <div class="st-col2">
+            <h1>Outing</h1>
+            <span>Accepted:{{ outing_accept }}</span> <br>
+            <span>Pending: {{ pending_outing }} </span> <br>
+            <span>Rejected: {{ outing_reject}}</span>
+        </div>
+    </a>
+    <div class="st-col3">
+        <h1>Room Change</h1>
+    </div>
+    <div class="st-col4">
+        <h1>Complain</h1>
+    </div>
+
+</div>
+<div class="student-row">
+    <div class="student-col">
+        <table>
+            <tr>
+                <th>Hostel:</th>
+                <th>Semester:</th>
+                <th>Roon No:</th>
+                <th>Roll_No:</th>
+                <th>Name:</th>
+
+            </tr>
+            {% for c in student_s %}
+            <tr>
+                <td>{{ c.hostel }}</td>
+                <td>{{ c.semester }}</td>
+                <td>{{ c.room_number }}</td>
+                <td>{{ c.roll_no }}</td>
+                <td>{{ c.first_name }} {{ c.last_name }} </td>
+
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+{% endblock body %}

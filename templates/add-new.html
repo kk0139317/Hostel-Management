@@ -1,0 +1,30 @@
+{% extends "side-menu.html" %} 
+{% block body %}
+{% load static %}
+
+<div class="container">
+        <div class="header">
+        </div>
+        <div class="content">
+            <div class="cards">
+                <div class="card1">
+                    <div class="box">
+                        <a href="manage-student">student</a>
+                    </div>
+                    <div class="icon-case">
+                    <a href="manage-student"><img src="{% static 'images/2.png' %}" alt="" width="100px" height="100px"></a>
+                    </div>
+                </div>
+                <div class="card2">
+                    <div class="box">
+                       <a href="manage-admin"> Admin</a>
+                    </div>
+                    <div class="icon-case">
+                    <a href="manage-admin"><img src="/static/images/1.png" alt="" width="100px" height="100px"></a>   
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+        {% endblock body %}

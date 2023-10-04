@@ -1,0 +1,34 @@
+{% extends "side-menu.html" %} 
+{% block body %}
+
+<div class="main">
+    <div class="row">
+    </div>
+    <div class="row1">
+
+    <table class="tbl-room-change">
+                <tr>
+                    <th>Hostel</th>
+                    <th>Room No.</th>
+                    <th>Roll No.</th>
+                    <th>Student Name</th>
+                    <th>Complain</th>
+                    <th>Appruval</th>
+                </tr>
+                {% for i in student_complain %}
+                <tr>
+                  <td>{{ i.hostel }}</td>
+                   <td>{{ i.room_no }}</td>
+                   <td>{{ i.roll_number }}</td>
+                   <td>{{ i.student_name }}</td>
+                   <td>{{ i.complain }}</td>
+                  <td>
+                 <a href ="{% url 'complain_delete' i.id %} " class ="btn-danger">Done</a>
+                 </td>                        
+                </tr>
+                {% endfor %}
+    </table>
+
+    </div>
+</div> 
+{% endblock body %}

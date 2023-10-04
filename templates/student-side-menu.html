@@ -1,0 +1,35 @@
+ {% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/student-style.css' %}">
+   <!-- <link rel="stylesheet" href="css/bootstrap.css">-->/
+    <title>Student Panal</title>
+</head>
+
+<body>
+
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1>Student</h1>
+        </div>
+        <ul>
+            <a href="student-index"><li><img src="#"alt="">&nbsp;Home</li></a>
+            <a href="student-profile"><li><img src="#" alt="">&nbsp;Profile</li></a>
+            <a href="student-leave"><li><img src="#" alt="">&nbsp;Leave</li></a>
+            <a href="student-outing"><li><img src="#" alt="">&nbsp;Outing</li></a>
+            <a href="student-mess"><li><img src="#" alt="">&nbsp;Mess</li></a>
+            <a href="student-enquiry"><li><img src="#" alt="">&nbsp;Enquiry</li></a>
+            <a href="/logout" ><li><img src="#" alt="">&nbsp;Logout</li></a>
+        </ul>
+    </div>
+    {% block body  %}
+    {% endblock body %}
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    </body>
+</html>

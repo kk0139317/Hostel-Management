@@ -1,0 +1,43 @@
+{% extends "side-menu.html" %} 
+{% block body %}
+
+<div class="main">
+    <div class="row">
+    </div>
+    <div class="row1">
+
+    <table class="tbl-outing-admin">
+                <tr>
+                    <th>Hostel</th>
+                    <th>Room No.</th>
+                    <th>Roll No.</th>
+                    <th>Student Name</th>
+                    <th>Out Time</th>
+                    <th>In Time</th>
+                    <th>Reason</th>
+                    <th>Appruval</th>
+                    <th>Action</th>
+                </tr>
+                {% for i in student_outing %}
+                <tr>
+                  <td>{{ i.hostel }}</td>
+                   <td>{{ i.room_no }}</td>
+                   <td>{{ i.roll_no }}</td>
+                   <td>{{ i.student_name }}</td>
+                   <td>{{ i.outing_time }}</td>
+                   <td>{{ i.in_time }}</td>
+                   <td>{{ i.reason }}</td>
+                   <td>{{ i.Aaa }}</td>
+                   <td>
+                    <a href="{% url 'outing_accept' i.id %}" class="btn-secondry"> Accept</a>
+                </td>
+                <td>
+                    <a href="{% url 'outing_reject' i.id %}" class="btn-danger"> Reject</a>
+                </td>                       
+                </tr>
+                {% endfor %}
+    </table>
+
+    </div>
+</div>
+{% endblock body %}

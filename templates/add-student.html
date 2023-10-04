@@ -1,0 +1,149 @@
+{% extends "side-menu.html" %} {% block body %} {% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<div class="main-add-student">
+    <div class="row">
+    </div>
+    <form action="/add-student" method="POST">
+        {% csrf_token%}
+        <div class="form-student">
+            <div class="row-1">
+                <div class="col-1">
+                    <label>First Name:</label>
+                    <div class="group">
+                        <input type="text" class="form-control" placeholder="First Name" name="first_name" required="required" />
+                    </div>
+                </div>
+                <div class="col-1">
+                    <label>Last Name:</label>
+                    <div class="group">
+                        <input type="text" class="form-control" placeholder="Last Name" name="last_name" required="required" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-2">
+                <div class="col-1">
+                    <label>Father First Name:</label>
+                    <div class="group">
+                        <input type="text" class="form-control" placeholder="Father First  Name" name="father_first_name" required="required" />
+                    </div>
+                </div>
+                <div class="col-1">
+                    <label>Father Last Name:</label>
+                    <div class="group">
+                        <input type="text" class="form-control" placeholder="Father Last Name" name="father_last_name" required="required"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-3">
+                <div class="col-1">
+                    <label>Mobile Number :</label>
+                    <div class="group">
+                        <input type="number" class="form-control" placeholder="+91-7991198925" name="mobile_number" required="required"/>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <label>Alternate Mobile Number:</label>
+                    <div class="group">
+                        <input type="number" class="form-control" placeholder="+91-7991198925" name="alternate_number" />
+                    </div>
+                </div>
+            </div>
+            <div class="row-4">
+
+                <div class="col-2">
+                    <label>Email-Id:</label>
+                    <div class="group">
+                        <input type="email" style='border:none;outline:none;'class="form-control" placeholder="Vishalgupta.itcs@gmail.com" name="email_id" required="required"/>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <label>Gender :</label>
+                    <select class="group" name="gender">
+
+                         <option value = "male" >Male</option>
+                         <option value = "Female" >Female</option> 
+                         <option value = "Other" >Other</option>
+                    </select>
+                </div>
+                <div class="col-2">
+                    <label >Blood Group :</label>
+                    <select class="group" name="blood_group">
+                     <option value="A+">A+</option>
+                     <option value="B+">B+</option>
+                     <option value="A-">A-</option>
+                     <option value="B-" >B-</option>
+                     <option value="AB">AB+</option>
+                     <option valur="AB-">AB-</option>
+                     <option value="O+">O+</option>
+                     <option value="O-">O-</option>
+                </select>
+                </div>
+            </div>
+
+            <div class="row-5">
+                <div class="col-1">
+                    <label>College Name :</label>
+                    <div class="group">
+                        <input type="text" class="form-control" placeholder="Collage Name" name="college_name" required="required" />
+                    </div>
+                </div>
+                <div class="col-1">
+                    <label>Semester:</label>
+                    <div class="group">
+                        <input type="text" class="form-control" placeholder="Semester" name="semester" required="required" />
+                    </div>
+                </div>
+            </div>
+            <div class="row-6">
+                <div class="col-1">
+                    <label>Roll Number :</label>
+                    <div class="group">
+                        <input type="text" class="form-control" placeholder="Roll Number" name="roll_no"required="required" />
+                    </div>
+                </div>
+                <div class="col-1">
+                    <label>Date Of Birth :</label>
+                    <div class="group">
+                        <input type="date" style='outline:none; border:none;'class="form-control" placeholder="DD-MM-YYYY" name="dob" required="required" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-7">
+                <div class="col-2">
+                    <label > Hostel:</label>
+                    <select class="group" name="hostel">
+                     <option value="Boys Hostel 1" >Boys Hostel 1</option>
+                     <option value="Boys Hostel 2">Boys Hostel 2</option>
+                     <option value="Boys Hostel 3">Boys Hostel 3</option>
+                     <option value="Girls Hostel">Girls Hostel</option>
+                     <option value="Green Hostel">Green Hostel </option>
+                </select>
+                </div>
+
+                <div class="col-2">
+                    <label> Floor:</label>
+                    <select class="group" name="floor">
+                     <option value="Ground Floor">Ground Floor</option>
+                     <option value="First Floor">First Floor</option>
+                     <option value="Second Floor">Second Floor</option>
+                     <option value="Third Floor">Third Floor</option>
+                     <option value="Fourth Floor">Fourth Floor </option>
+                </select>
+                </div>
+                <div class="col-2">
+                    <label>Room Number:</label>
+                    <div class="group">
+                        <input type="text" class="form-control" placeholder="Enter Your Room Number" name="room_number" required="required" />
+                    </div>
+                </div>
+            </div>
+            <div class="row-8">
+                <input type="submit" class="st-submit" name="submit" />
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock body %}

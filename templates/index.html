@@ -1,0 +1,149 @@
+{% extends 'side-menu.html' %} 
+{% block body %}
+
+{%load static%}
+    <div class="container">
+        <div class="header">
+            <div class="space"></div>
+            <div class="nav">
+                <div class="search">
+                   <!--<input type="text" placeholder="Search">
+                    <button type="submit"><img src="{% static '/images/search.png' %}"alt="#"></button>-->
+                </div>
+                <div class="user">
+                    {% comment %} <a href="add-new" class="btn">ADD NEW</a> {% endcomment %}
+                    <img src="#" alt="">
+                    <div class="img-case">
+                        <img src="#" alt="" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <a href="/manage-student">
+            <div class="cards">
+                <div class="card">
+                    <div class="box">
+                       
+
+                        <h1>{{ number_of_student }}</h1>
+                        
+                        <h3>student</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="{% static 'images/2.png' %}" alt="" width="100px" height="100px">
+                    </div>
+                </div>
+            </a>
+            <a href="manage-admin">
+                <div class="card-1">
+                    <div class="box">
+                        
+                        <h1>{{ number_of_admin}}</h1>
+                        
+                        <h3>Admin</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="{% static 'images/admin.png' %}" alt="" width="100px" height="100px">
+                    </div>
+                </div>
+            </a>
+                <a href="/leave">
+                <div class="card-2">
+                    <div class="box"style="margin-left:15px;">
+                        <h1> {{ pending_leave }} </h1>
+                        <h3 > Pending Leave</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="{% static 'images/leave.png' %}" alt="" width="100px" height="100px">
+                    </div>
+                </div>
+            </a>
+            <a href="/outing">
+                <div class="card-3">
+                    <div class="box"style="margin-left:15px;">
+                        <h1>{{ pending_outing }}</h1>
+                        <h3>Pending Outing</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="#" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </a>
+            <div class="content-2">
+                <div class="recent">
+                    <div class="title">
+                        <h2>Pending Complain</h2>
+                        {% comment %} <a href="#" class="btn">View All</a> {% endcomment %}
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Hostel:</th>
+                            <th>Roon No:</th>
+                            <th>Roll_No:</th>
+                            <th>Complain:</th>
+                            
+                        </tr>
+                        {% for  c in complain %}
+                        <tr>
+                            <td>{{ c.hostel }}</td>
+                            <td>{{ c.room_no }}</td>
+                            <td>{{ c.roll_number }}</td>
+                            <td>{{ c.complain }}</td>
+                            
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    
+                </div>
+                <div class="new">
+                    <div class="title">
+                        <h2>Recent</h2>
+                        {% comment %} <a href="#" class="btn">View All</a> {% endcomment %}
+                    </div>
+                   <!-- <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Name</th>
+                            <th>Name</th>
+                            <th>Name</th>
+                        </tr>
+                        <tr>
+                            <td>vishal</td>
+                            <td>college</td>
+                            <td>CSE</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>vishal</td>
+                            <td>college</td>
+                            <td>CSE</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>vishal</td>
+                            <td>college</td>
+                            <td>CSE</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>vishal</td>
+                            <td>college</td>
+                            <td>CSE</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>vishal</td>
+                            <td>college</td>
+                            <td>CSE</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                    </table>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}

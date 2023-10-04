@@ -1,0 +1,50 @@
+{% extends "side-menu.html" %} 
+{% block body %}
+<div class="main-profile">
+    <div class="profile-images">
+        <!-- <img src="images/user.png" class="profile-images"> -->
+        <input type="file" id="input_profile-img">
+    </div>
+    {% for i in user_admin_detail %}
+    <div id="profile-name">{{ i.first_name}} {{ i.last_name }}</div>
+    <div class="details">
+        <p>Personal Details:</p>
+    </div>
+    <div class="lines"></div>
+    <div class="main-personal">
+        <div class="main-personal-col">
+        <spam class="personal-details">Fathes's Name:</spam><br><br>
+        <spam class="personal-details">DOB:</spam><br><br>
+        <spam class="personal-details">Gender:</spam><br><br>
+        <spam class="personal-details">Blood Group:</spam><br><br>
+        <spam class="personal-details">Community:</spam><br><br>
+        <spam class="personal-details">Religion:</spam><br><br>
+    </div>
+    <div class="main-personal-col">
+        <spam class="personal-details"> {{ i.father_first_name }} {{ i.father_last_name }}</spam><br><br>
+        <spam class="personal-details">{{ i.dob }}</spam><br><br>
+        <spam class="personal-details">{{ i.gender }}</spam><br><br>
+        <spam class="personal-details">{{ i.blood_group }}</spam><br><br>
+        <spam class="personal-details">{{ i.community }}</spam><br><br>
+        <spam class="personal-details">{{ i.religion }}</spam><br><br>
+    </div>
+ </div>
+     <div class="persona-contact">
+            <p>Contacts</p>
+        </div>
+        <div class="lines"></div>
+        <div class="main-contact">
+        <div class="main-personal-col">
+        <spam class="personal-details">Mobile No.</spam><br><br>
+        <spam class="personal-details">Phone No.</spam><br><br>
+        <spam class="personal-details">Email Id.</spam><br><br>
+    </div>
+    <div class="main-personal-col">
+        <spam class="personal-details">{{ i.mobile_number }} </spam><br><br>
+    <spam class="personal-details">{{ i.alternate_number }}</spam><br><br>
+        <spam class="personal-details">{{ i.email_id }}</spam><br><br>
+    </div>
+    {% endfor %}
+ </div>
+</div>
+{% endblock body %}

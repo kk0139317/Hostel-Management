@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+   <!-- <link rel="stylesheet" href="css/bootstrap.css">-->/
+    <title>Admin Panal</title>
+</head>
+
+<body>
+
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1>Admin</h1>
+        </div>
+        <ul>
+            <a href="/">  <li><img src="{% static 'images/home.png' %}" alt="" width='30px' height='30px'>&nbsp;Home</li></a>
+            <a href="profile"> <li><img src="{% static 'images/logout.png' %}" alt="" width='30px' height='30px'>&nbsp; Profile</li></ai>
+            <a href="hostel"><li><img src="{% static 'images/hostel.png' %}" alt="" width='30px' height='30px'>&nbsp;Hostel</li></a>
+            <a href="leave"> <li><img src="{% static 'images/leave-img.png' %}" alt="" width='30px' height='30px'>&nbsp;Leave</li></a>
+            <a href="outing"><li><img src="{% static 'images/outing.png' %}" alt=""width='30px' height='30px'>&nbsp; Outing</li></a>
+            <a href="mess"><li><img src="{% static 'images/mess.png' %}" alt=""width='30px' height='30px'>&nbsp; Mess</li></a>
+            <a href="enquiry"><li><img src="{% static 'images/enquiry.png' %}" alt=""width='30px' height='30px'>&nbsp;Enquiry</li></a>
+            <!--<li><img src="#" alt="">&nbsp;Dashboard</li>-->
+            <a href="logout"> <li><img src="{% static 'images/logout-1.png' %}"  alt=""width='30px' height='30px'> &nbsp; <a href="logout">Logout </li></a>
+        </ul>
+    </div>
+    {% block body %}
+    {% endblock body %}
+    <script src="{% static '/js/jquery.js' %}"></script>
+    <script src="{% static '/js/bootstrap.js' %}"></script>
+    </body>
+</html>

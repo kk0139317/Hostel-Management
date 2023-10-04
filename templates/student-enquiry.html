@@ -1,0 +1,35 @@
+{% extends "student-side-menu.html" %} 
+{% block body %}
+{% load static%}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+<div class="container">
+        <div class="header">
+        </div>
+        <div class="content">
+            <div class="cards">
+                <div class="card1">
+                    <div class="box">
+                        <a href="student-room-change">Room Change</a>
+                    </div>
+                    <div class="icon-case">
+                        <img src="#" alt="">
+                    </div>
+                </div>
+                <div class="card1">
+                    <div class="box">
+                       <a href="student-complain"> Complain</a>
+                    </div>
+                    <div class="icon-case">
+                        <img src="#" alt="">
+                    </div>
+                </div>
+                
+
+            </div>
+            
+            </div>
+        </div>
+        {% endblock body %}

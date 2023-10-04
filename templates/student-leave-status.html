@@ -1,0 +1,48 @@
+{% extends 'student-side-menu.html' %} 
+{% block body %} 
+{% load static%}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<div class="main">
+    <div class="row">
+    </div>
+    <div class="row1">
+        <table class="tbl-leave">
+            <tr>
+                <th>S.No</th>
+                <th>Hostel</th>
+                <th>Room No.</th>
+                <th>Roll No.</th>
+                <th>Student Name</th>
+                <th>Dept</th>
+                <th>Date Of Outing</th>
+                <th>Date Of Comming</th>
+                <th>Number Of Days</th>
+                <th>Reason</th>
+                <th>Appruval</th>
+
+            </tr>
+            {% for i in student_leave_status %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ i.hostel }}</td>
+                <td>{{ i.room_no}}</td>
+                <td>{{ i.roll_no }}</td>
+                <td>{{ i.student_name}}</td>
+                <td>{{ i.dept}}</td>
+                <td>{{ i.date_of_outing }}</td>
+                <td> {{ i.date_of_comeing }}</td>
+                <td>{{ i.number_of_days}}</td>
+                <td>{{ i.reason}}</td>
+                <td>{{ i.Aaa}}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+        </form>
+
+    </div>
+</div>
+
+{% endblock body %}

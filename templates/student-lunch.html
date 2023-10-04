@@ -1,0 +1,59 @@
+{% extends "student-side-menu.html" %} {% block body %} {% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<div class="lunch-main">
+    <div class="lunch-row">
+        <div class="lunch-col">
+            <div class="lunch-col-first">
+            </div>
+            <div class="lunch-col-second" style='background:white;'>
+
+                <img src="{% static 'images/lunch-img.png' %}" alt="" height='200px' width='200px' style=' margin-left:-20px; margin-top:-20px;'>
+
+            </div>
+            <div class="lunch-col-third">
+            </div>
+        </div>
+        <div class="lunch-col-1">
+            <div class="breakfst-menu">
+                <p>Sunday</p>
+                <div>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+                    <span>&nbsp;&nbsp;&nbsp; </span>
+                </div>
+                <p>Monday</p>
+                <div>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+                </div>
+                <p>Tuesday</p>
+                <div>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+                </div>
+                <p>Wednesday</p>
+                <div>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+                </div>
+                <p>Thrusday</p>
+                <div>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+                </div>
+                <p>Friday</p>
+                <div>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+                </div>
+                <p>Saturday</p>
+                <div>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+                    <span>&nbsp;&nbsp;&nbsp;</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,60 @@
+{% extends "side-menu.html" %} 
+{% block body %} 
+{% load static %}
+
+<div class="breakefast-main">
+    <div class="breakfast-row">
+        <div class="breakfast-col">
+            <div class="breakfast-col-first">
+            </div>
+            <div class="breakfast-col-second">
+                <div class="breakfast-second">
+                    <img src="{% static 'images/breakfast-img.png' %}" alt="" height='200px' width='200px'style=' margin-left:-20px;'>
+                </div>
+            </div>
+            <div class="breakfast-col-third">
+            </div>
+        </div>
+        <div class="breakfast-col-1">
+            <div class="breakfst-menu">
+                <p>Sunday</p>
+                <div>
+                    <span>Bread</span>
+                    <span>Jam</span>
+                </div>
+                <p>Monday:</p>
+                <div>
+                    <span>Allu Prata</span><br>
+                    <span>Tomato Ketchup</span>
+                </div>
+                <p>Tuesday</p>
+                <div>
+                    <span>Noodles</span>
+                    <span>Ketchup</span>
+                </div>
+                <p>Wednesday</p>
+                <div>
+                    <span>Bread</span>
+                    <span>Ghanta</span>
+                </div>
+                <p>Thrusday</p>
+                <div>
+                    <span>puri</span>
+                    <span>Sabji</span>
+                </div>
+                <p>Friday</p>
+                <div>
+                    <span>Noodles</span>
+                    <span>Ketchup</span>
+                </div>
+                <p>Saturday</p>
+                <div>
+                    <span>Puri</span>
+                    <span>Sabji</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,47 @@
+{% extends 'student-side-menu.html' %}
+{% block body %}
+<div class="outing-main">
+    <div class="outing">
+         <div class="outing-form">
+            <form action="/student-complain" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                <label>Hostel:</label>
+                <div class="group">
+                    <input type="text" class="form-control" placeholder="Hostel"  name="hostel"required="required"/>
+                </div>
+                  </div>
+
+               <div class="form-group">
+                <label>Room No:</label>
+                <div class="group">
+                    <input type="number" style='boreder:none;outline:none;' class="form-control" placeholder="Room_no"  name="room_no"required="required"/>
+                </div>
+                </div>
+
+            <div class="form-group">
+                <label>Student Name:</label>
+                <div class="group">
+                    <input type="text"class="form-control" placeholder="Student Name"  name="student_name"required="required"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Dept:</label>
+                <div class="group">
+                    <input type="text"class="form-control" placeholder="dept"  name="dept"required="required"/>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Complain:</label>
+                <div class="group">
+                    <input type="text"class="form-control" placeholder="complain"  name="complain"required="required"/>
+                </div>
+            </div>
+            <button type="submit" name="submit" value="">Submit</button>
+        </form>
+    </div>
+
+    </div>
+</div>
+{% endblock body %}

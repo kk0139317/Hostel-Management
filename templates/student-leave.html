@@ -1,0 +1,64 @@
+{% extends 'student-side-menu.html' %}
+{% block body %}
+<div class="outing-main">
+    <div class="outing">
+         <div class="outing-form">
+            <form action="/student-leave" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                <label>Hostel:</label>
+                <div class="group">
+                    <input type="text" class="form-control" placeholder="Hostel"  name="hostel"required="required"/>
+                </div>
+                  </div>
+
+               <div class="form-group">
+                <label>Room No:</label>
+                <div class="group">
+                    <input type="number" style='border:none; outline:none;' class="form-control" placeholder="room_no"  name="room_no"required="required"/>
+                </div>
+                </div>
+
+            <div class="form-group">
+                <label>Student Name:</label>
+                <div class="group">
+                    <input type="text"class="form-control" placeholder="Student Name"  name="student_name"required="required"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Dept:</label>
+                <div class="group">
+                    <input type="text"class="form-control" placeholder="dept"  name="dept"required="required"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Date Of Outing:</label>
+                <div class="group">
+                    <input type="date" style='border:none;outlin:none'class="form-control" placeholder="Date Of Outing"  name="date_of_outing"required="required"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Date Of Comming:</label>
+                <div class="group">
+                    <input type="date" style='border:none;outlin:none' placeholder="Date Of Comming"  name="date_of_comeing"required="required"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Number Of Days</label>
+                <div class="group">
+                    <input type="text"class="form-control" placeholder="Number Of Days"  name="number_of_days"required="required"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Reason:</label>
+                <div class="group">
+                    <input type="text"class="form-control" placeholder="Reason"  name="reasion"required="required"/>
+                </div>
+            </div>
+            <button type="submit" name="submit" value="">Submit</button>
+        </form>
+    </div>
+
+    </div>
+</div>
+{% endblock body %}
