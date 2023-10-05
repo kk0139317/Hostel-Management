@@ -1,7 +1,5 @@
 from distutils.log import error
 import email
-import djangorestframework
-import cyrups
 from re import S
 from urllib import request
 from django.shortcuts import redirect, render, HttpResponse
